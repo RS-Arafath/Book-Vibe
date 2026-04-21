@@ -1,6 +1,42 @@
 import React from 'react';
+import Homepage from './../../../Pages/HomePage/Homepage';
+import { Link, Links, NavLink } from 'react-router';
 
 const Navbar = () => {
+  const links = (
+    <>
+      <li>
+        <NavLink
+          to={'/'}
+          className={({ isActive }) =>
+            `font-semibold ${isActive ? 'text-green-500 border border-green-400' : ''}`
+          }
+        >
+          Home
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={'/books'}
+          className={({ isActive }) =>
+            `font-semibold ${isActive ? 'text-green-500 border border-green-400' : ''}`
+          }
+        >
+          Listed Books
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to={'/page-to-read'}
+          className={({ isActive }) =>
+            `font-semibold ${isActive ? 'text-green-500 border border-green-400' : ''}`
+          }
+        >
+          Page to read
+        </NavLink>
+      </li>
+    </>
+  );
   return (
     <div className="navbar bg-base-100 shadow-sm">
       <div className="navbar-start">
@@ -24,54 +60,27 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100/20 backdrop-blur-xl border border-white/10 rounded-box z-10 mt-3 w-30 p-2 shadow-lg"
           >
-            <li>
-              <a>Item 1</a>
-            </li>
-            <li>
-              <a>Parent</a>
-              <ul className="p-2">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
-            </li>
+            {links}
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">daisyUI</a>
+        <a
+          onClick={() => (window.location.href = '/')}
+          className="font-bold cursor-pointer text-xl"
+        >
+          Book Vibe
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">
-          <li>
-            <a>Item 1</a>
-          </li>
-          <li>
-            <details>
-              <summary>Parent</summary>
-              <ul className="p-2 bg-base-100 w-40 z-1">
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
-          </li>
-          <li>
-            <a>Item 3</a>
-          </li>
-        </ul>
+        <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
-      <div className="navbar-end">
-        <a className="btn">Button</a>
+      <div className="navbar-end flex gap-3">
+        <a className="btn bg-green-600 hover:bg-green-500">Sign In</a>
+        <NavLink to={'/signUp'}>
+          {' '}
+          <button className="btn btn-outline btn-info">Sign Up</button>
+        </NavLink>
       </div>
     </div>
   );
