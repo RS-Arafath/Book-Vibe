@@ -67,7 +67,7 @@ const Navbar = () => {
         </div>
         <a
           onClick={() => (window.location.href = '/')}
-          className="font-bold cursor-pointer text-xl"
+          className="font-bold cursor-pointer text-sm sm:text-xl"
         >
           Book Vibe
         </a>
@@ -76,10 +76,17 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{links}</ul>
       </div>
       <div className="navbar-end flex gap-3">
-        <a className="btn bg-green-600 hover:bg-green-500">Sign In</a>
         <NavLink to={'/signIn'}>
           {' '}
-          <button className="btn btn-outline btn-info">Sign Up</button>
+          <a className="btn bg-green-600 p-2 md:p-4 hover:bg-green-500">
+            Sign In
+          </a>
+        </NavLink>
+        <NavLink to={'/signUp'}>
+          {' '}
+          <button className="btn btn-outline p-2 md:p-4 btn-info">
+            Sign Up
+          </button>
         </NavLink>
       </div>
     </div>

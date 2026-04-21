@@ -6,6 +6,7 @@ import Books from "../Pages/Books/Books";
 import Homepage from "../Pages/HomePage/Homepage";
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import SignIn from '../Pages/SignIn/SignIn';
+import SignUp from '../Pages/SignUP/SignUp';
 
 
 export const router = createBrowserRouter([
@@ -25,7 +26,10 @@ export const router = createBrowserRouter([
     errorElement: <ErrorPage></ErrorPage>
    
   }, {
-    path: "signIn",
+    path: "signUp",
     Component:SignIn
+  }, {
+    path: "signIn",
+    Component: SignUp
   }
 ]);
