@@ -38,7 +38,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 shadow-sm">
+    <div className="container mx-auto navbar bg-base-100 shadow-sm font-secondary">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -78,13 +78,13 @@ const Navbar = () => {
       <div className="navbar-end flex gap-3">
         <NavLink to={'/signIn'}>
           {' '}
-          <a className="btn bg-green-600 p-2 md:p-4 hover:bg-green-500">
+          <a className="btn bg-green-600 p-2 font-semibold md:p-4 hover:bg-green-500">
             Sign In
           </a>
         </NavLink>
         <NavLink to={'/signUp'}>
           {' '}
-          <button className="btn btn-outline p-2 md:p-4 btn-info">
+          <button className="btn font-secondary btn-outline p-2 md:p-4 btn-info">
             Sign Up
           </button>
         </NavLink>

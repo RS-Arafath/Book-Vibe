@@ -2,6 +2,18 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-body{
-  font-family: "Playfair Display", serif;
+
+@theme {
+  --font-primary: "Playfair Display", serif;
+  --font-secondary: "Work Sans", sans-serif;
 }
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+/* body{
+  font-family: "Playfair Display", serif;
+} */
