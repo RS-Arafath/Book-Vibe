@@ -4,8 +4,8 @@ const AllBooks = () => {
   const books = use(bookPromise)
   console.log(books);
   return (
-    <div>
-      
+    <div className='mt-20'>
+      <h2 className='text-5xl'>books</h2>
     </div>
   );
 };
