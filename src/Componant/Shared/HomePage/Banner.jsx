@@ -2,7 +2,7 @@ import React from 'react';
 import BannerImg from '../../../assets/pngwing 1.png';
 const Banner = () => {
   return (
-    <div className=" container my-10 hero flex items-center bg-base-200 min-h-[70vh]  mx-auto rounded-2xl shadow-2xl">
+    <div className=" container my-10 hero flex items-center bg-base-200 min-h-[70vh]  mx-auto rounded-2xl shadow">
       <div className="hero-content flex-col top-0 lg:flex-row-reverse w-full justify-between items-center mx-15 ">
         <div className="hover-3d">
           {/* content */}
@@ -25,7 +25,7 @@ const Banner = () => {
             bookshelf!
           </h1>
 
-          <button className="btn btn-success">View The List</button>
+          <button className="btn btn-success text-white/80">View The List</button>
         </div>
       </div>
     </div>
