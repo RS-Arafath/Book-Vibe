@@ -2,7 +2,7 @@ import React from 'react';
 import BannerImg from '../../../assets/pngwing 1.png';
 const Banner = () => {
   return (
-    <div className=" container font-primary hero flex items-center bg-base-200 h-175 sm:h-200 py-7 lg:h-107.5 max-h-[75vh] mx-auto rounded-2xl shadow mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-25 ">
+    <div className=" container font-primary hero flex items-center bg-base-200 h-175 sm:h-200 py-7 lg:h-107.5 max-h-[75vh] mx-auto rounded-2xl shadow mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-2 ">
       <div className="hero-content mx-auto flex-col top-0 lg:flex-row-reverse w-full justify-between items-center ">
         <div className="hover-3d">
           {/* content */}
