@@ -4,8 +4,12 @@ const AllBooks = () => {
   const books = use(bookPromise)
   console.log(books);
   return (
-    <div className='mt-20'>
-      <h2 className='text-5xl'>books</h2>
+    <div className='container mx-auto'>
+      <h2 className='text-3xl sm:text-4xl md:text-5xl font-bold text-center'>books</h2>
+
+      {
+        
+      }
     </div>
   );
 };

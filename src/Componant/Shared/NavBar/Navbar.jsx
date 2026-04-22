@@ -79,9 +79,9 @@ const Navbar = () => {
         <div className="navbar-end flex gap-3">
           <NavLink to={'/signIn'}>
             {' '}
-            <a className="btn bg-green-600 p-2 font-semibold md:p-4 hover:bg-green-500">
+            <button className="btn bg-green-600 p-2 font-semibold md:p-4 hover:bg-green-500">
               Sign In
-            </a>
+            </button>
           </NavLink>
           <NavLink to={'/signUp'}>
             {' '}
