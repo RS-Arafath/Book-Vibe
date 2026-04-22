@@ -7,7 +7,7 @@ const Banner = () => {
         <div className="hover-3d">
           {/* content */}
           <figure className="max-w-70 rounded-2xl">
-            <img src={BannerImg} alt="Tailwind CSS 3D hover" />
+            <img src={BannerImg} alt="3D hover img" />
           </figure>
           {/* 8 empty divs needed for the 3D effect */}
           <div></div>
