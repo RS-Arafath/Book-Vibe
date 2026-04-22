@@ -3,18 +3,19 @@
 @import "tailwindcss";
 
 
-
+/
 @theme {
   --font-primary: "Playfair Display", serif;
   --font-secondary: "Work Sans", sans-serif;
 }
 .font-primary {
-  font-family: var(--font-primary);
+  font-family: var(--font-primary)
 }
 
 .font-secondary {
   font-family: var(--font-secondary);
 }
-/* body{
+body{
   font-family: "Playfair Display", serif;
-} */
+} 
+
