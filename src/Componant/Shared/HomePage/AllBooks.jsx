@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import { IoStarHalfOutline } from 'react-icons/io5';
-const bookPromise = fetch('/public/booksData.json').then((res) => res.json());
+const bookPromise = fetch('/booksData.json')
+.then((res) => res.json());
 const AllBooks = () => {
   const books = use(bookPromise);
   console.log(books);
