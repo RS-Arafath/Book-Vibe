@@ -6,7 +6,7 @@ import Books from "../Pages/Books/Books";
 import Homepage from "../Pages/HomePage/Homepage";
 import ErrorPage from '../Pages/ErrorPage/ErrorPage';
 import SignIn from '../Pages/SignIn/SignIn';
-import SignUp from '../Pages/SignUP/SignUp';
+import SignUp from '../Pages/SignUp/SignUp';
 
 
 export const router = createBrowserRouter([
