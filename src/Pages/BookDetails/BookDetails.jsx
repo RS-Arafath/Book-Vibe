@@ -1,13 +1,13 @@
 
 import { use } from 'react';
-import {  useParams } from 'react-router';
+import {  useNavigate, useParams } from 'react-router';
 
 const bookPromise = fetch('/booksData.json').then((res) => res.json());
 
 
 const BookDetails = () => {
   const { bookId } = useParams()
-
+const navigate = useNavigate();
   const books = use(bookPromise)
   
   const expectedBook = books.find((book) => book.bookId == bookId)
@@ -93,6 +93,7 @@ const {
           </div>
         </div>
         <div className=" flex gap-2 md:gap-4 my-5 font-secondary">
+          <button onClick={()=>{navigate(-1)}} className='btn btn-outline'>Back</button>
           <button className="btn btn-outline">Read</button>
           <button className="btn btn-primary">Wishlist</button>
         </div>
