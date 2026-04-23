@@ -1,5 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router';
-import { Outlet } from 'react-router';
+import { createBrowserRouter } from 'react-router';
 import MainLayOut from '../Layout/MainLayOut';
 import Books from '../Pages/Books/Books';
 import Homepage from '../Pages/HomePage/Homepage';
@@ -11,8 +10,8 @@ import BookDetails from '../Pages/BookDetails/BookDetails';
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <MainLayOut />,
-
+    element: <MainLayOut />, // Navbar এখানে আছে
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -23,18 +22,17 @@ export const router = createBrowserRouter([
         element: <Books />,
       },
       {
-        path: '/bookDetails/:bookId',
-        element: <BookDetails></BookDetails>,
-      },
-      {
-        path: 'signUp',
-        element: <SignUp />,
-      },
-      {
-        path: 'signIn',
-        element: <SignIn />,
+        path: 'bookDetails/:bookId',
+        element: <BookDetails />,
       },
     ],
-    errorElement: <ErrorPage />,
+  },
+  {
+    path: '/signIn',
+    element: <SignIn />,
+  },
+  {
+    path: '/signUp',
+    element: <SignUp />,
   },
 ]);
