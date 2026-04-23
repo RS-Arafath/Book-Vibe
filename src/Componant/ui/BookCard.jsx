@@ -1,9 +1,12 @@
 import React from 'react';
 import { IoStarHalfOutline } from 'react-icons/io5';
+import { Link } from 'react-router';
+import BookDetails from './../../Pages/BookDetails/BookDetails';
 
 const BookCard = ({book}) => {
   return (
-    <div
+    <Link
+      to={`/BookDetails/${book.bookId}`}
       className="card cursor-pointer  w-full h-full items-stretch border  mx-auto bg-base-100 border-gray-200 shadow-xl
   hover:border-blue-400 hover:shadow-blue-200 hover:shadow-xl hover:-translate-y-2
   transition-all duration-300 ease-in-out  "
@@ -31,8 +34,11 @@ const BookCard = ({book}) => {
       </div>
       <div className="card-body">
         <div className="flex gap-2">
-          {book.tags.map((tag) => (
-            <strong className="badge badge-soft badge-success font-semibold ">
+          {book.tags.map((tag, ind) => (
+            <strong
+              key={ind}
+              className="badge badge-soft badge-success font-semibold "
+            >
               {' '}
               {tag}
             </strong>
@@ -54,7 +60,7 @@ const BookCard = ({book}) => {
           </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
