@@ -76,19 +76,19 @@ const {
 
         <div className="flex flex-col gap-3 font-secondary">
           <div className="flex">
-            <span className=" w-48 text-[#737373] ">Number of pages</span>
+            <span className="w-40 sm:w-48 text-[#737373] ">Number of pages</span>
             <span className="font-semibold">: {totalPages}</span>
           </div>
           <div className="flex">
-            <span className=" w-48 text-[#737373]">Publisher</span>
+            <span className=" w-40 sm:w-48 text-[#737373]">Publisher</span>
             <span className="font-semibold">: {publisher}</span>
           </div>
           <div className="flex">
-            <span className=" w-48 text-[#737373]">Year of Publishing</span>
+            <span className=" w-40 sm:w-48 text-[#737373]">Year of Publishing</span>
             <span className="font-semibold">: {yearOfPublishing}</span>
           </div>
           <div className="flex">
-            <span className=" w-48 text-[#737373]">Rating</span>
+            <span className="w-40 sm:w-48 text-[#737373]">Rating</span>
             <span className="font-semibold">: {rating}</span>
           </div>
         </div>
