@@ -55,9 +55,7 @@ const {
             Review:{' '}
           </span>
           {'   '}
-          <span className="text-base sm:text-lg font-secondary ">
-            {review}
-          </span>
+          <span className="text-base sm:text-lg font-secondary ">{review}</span>
         </p>
 
         <div className="flex gap-2 items-center">
@@ -76,7 +74,9 @@ const {
 
         <div className="flex flex-col gap-3 font-secondary">
           <div className="flex">
-            <span className="w-40 sm:w-48 text-[#737373] ">Number of pages</span>
+            <span className="w-40 sm:w-48 text-[#737373] ">
+              Number of pages
+            </span>
             <span className="font-semibold">: {totalPages}</span>
           </div>
           <div className="flex">
@@ -84,7 +84,9 @@ const {
             <span className="font-semibold">: {publisher}</span>
           </div>
           <div className="flex">
-            <span className=" w-40 sm:w-48 text-[#737373]">Year of Publishing</span>
+            <span className=" w-40 sm:w-48 text-[#737373]">
+              Year of Publishing
+            </span>
             <span className="font-semibold">: {yearOfPublishing}</span>
           </div>
           <div className="flex">
@@ -93,9 +95,16 @@ const {
           </div>
         </div>
         <div className=" flex gap-2 md:gap-4 my-5 font-secondary">
-          <button onClick={()=>{navigate(-1)}} className='btn btn-outline'>Back</button>
-          <button className="btn btn-outline">Read</button>
-          <button className="btn btn-primary">Wishlist</button>
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+            className="btn btn-outline"
+          >
+            Back
+          </button>
+          <button className="btn btn-primary">Read</button>
+          <button className="btn btn-accent">Wishlist</button>
         </div>
       </div>
     </div>

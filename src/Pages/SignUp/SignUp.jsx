@@ -97,7 +97,7 @@ export default function SignUp() {
 
           {/* //sign in option */}
           <div className="my-5 space-y-3 ">
-            <button className="btn bg-white w-full  text-black border-[#e5e5e5]">
+            <button className="btn bg-white w-full shadow-none text-black border-[#e5e5e5]">
               <svg
                 aria-label="Google logo"
                 width="16"
@@ -127,7 +127,7 @@ export default function SignUp() {
               </svg>
               Login with Google
             </button>
-            <button className="btn w-full bg-[#1A77F2] text-white border-[#005fd8]">
+            <button className="btn w-full shadow-none bg-[#1A77F2] text-white border-[#005fd8]">
               <svg
                 aria-label="Facebook logo"
                 width="16"
@@ -142,7 +142,7 @@ export default function SignUp() {
               </svg>
               Login with Facebook
             </button>
-            <button className="btn w-full bg-black text-white border-black">
+            <button className="btn w-full shadow-none bg-black text-white border-black">
               <svg
                 aria-label="GitHub logo"
                 width="16"
