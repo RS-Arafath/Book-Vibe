@@ -74,7 +74,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1 text-lg">{links}</ul>
         </div>
         <div className="navbar-end flex gap-3">
           <NavLink to={'/signIn'}>

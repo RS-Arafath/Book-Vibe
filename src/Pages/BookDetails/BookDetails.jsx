@@ -11,7 +11,7 @@ const BookDetails = () => {
   const books = use(bookPromise)
   
   const expectedBook = books.find((book) => book.bookId == bookId)
-  console.log(expectedBook.image,'expected book');
+  // console.log(expectedBook.image,'expected book');
 const {
   bookName,
   author,
@@ -26,16 +26,16 @@ const {
 } = expectedBook;
   
   return (
-    <div className="card container mx-auto lg:card-side bg-base-100 shadow-sm mt-20">
-      <figure className="p-5 bg-gray-100 rounded-xl w-full max-h-[500px]">
+    <div className="card w-11/12 container mx-auto  lg:card-side bg-base-100 shadow-xl mt-23">
+      <figure className="p-5 rounded-xl w-full max-h-[500px] flex-1 ">
         <img
           src={image}
           alt={bookName}
-          className="w-full h-[400px] object-contain rounded-xl"
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-contain transition duration-300 cursor-pointer overflow-hidden hover:ring "
         />
       </figure>
 
-      <div className="card-body">
+      <div className="card-body flex-2">
         <h2 className="font-primary text-3xl sm:text-4xl md:text-5xl font-bold">
           {bookName}
         </h2>
@@ -55,7 +55,9 @@ const {
             Review:{' '}
           </span>
           {'   '}
-          <span className="text-base sm:text-lg font-secondary">{review}</span>
+          <span className="text-base sm:text-lg font-secondary leading-9">
+            {review}
+          </span>
         </p>
 
         <div className="flex gap-2 items-center">
@@ -65,22 +67,34 @@ const {
               key={ind}
               className="badge badge-soft badge-success font-semibold "
             >
-              <span className='font-semibold '>#{tag}</span>
+              <span className="font-semibold ">#{tag}</span>
             </strong>
           ))}
         </div>
 
         <div className="divider my-0"></div>
 
-        <div>
-          <p>Number of pages: {totalPages}</p>
-          <p>Publisher: {publisher}</p>
-          <p>Year of Publishing: {yearOfPublishing}</p>
-          <p>Rating: {rating}</p>
+        <div className="flex flex-col gap-3 font-secondary">
+          <div className="flex">
+            <span className=" w-48 text-[#737373] ">Number of pages</span>
+            <span className="font-semibold">: {totalPages}</span>
+          </div>
+          <div className="flex">
+            <span className=" w-48 text-[#737373]">Publisher</span>
+            <span className="font-semibold">: {publisher}</span>
+          </div>
+          <div className="flex">
+            <span className=" w-48 text-[#737373]">Year of Publishing</span>
+            <span className="font-semibold">: {yearOfPublishing}</span>
+          </div>
+          <div className="flex">
+            <span className=" w-48 text-[#737373]">Rating</span>
+            <span className="font-semibold">: {rating}</span>
+          </div>
         </div>
-        <div className=" flex gap-2 md:gap-4">
+        <div className=" flex gap-2 md:gap-4 my-5 font-secondary">
           <button className="btn btn-outline">Read</button>
-          <button className="btn btn-primary">Listen</button>
+          <button className="btn btn-primary">Wishlist</button>
         </div>
       </div>
     </div>
