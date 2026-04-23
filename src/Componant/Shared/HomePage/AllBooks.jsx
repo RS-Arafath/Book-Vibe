@@ -9,12 +9,12 @@ const AllBooks = () => {
     <div className="container mx-auto font-primary">
       <h2 className="text-3xl font-secondary sm:text-4xl md:text-5xl font-bold text-center">
         <sup>
-          <small className='text-red-500'>{books.length}</small>
+          <small className="text-red-500">{books.length}</small>
         </sup>{' '}
         Books
       </h2>
 
-      <div className="w-11/12 grid grid-cols-1    mx-auto  md:grid-cols-2 lg:grid-cols-3 gap-10 mt-7 sm:mt-9 md:mt-10">
+      <div className="w-11/12 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mx-auto   gap-10 mt-7 sm:mt-9 md:mt-10">
         {books.map((book) => {
           return (
             <div
@@ -55,16 +55,16 @@ const AllBooks = () => {
                 <h2 className="card-title font-bold text-2xl sm:text-3xl md:text-4xl">
                   {book.bookName}
                 </h2>
-                <p className="font-semibold text-base sm:text-lg">
+                <p className="font-semibold text-base lg:text-lg">
                   {book.author}
                 </p>
 
-                <div className="divider"></div>
-                <div className="card-actions justify-between">
+                <div className="divider m-2"></div>
+                <div className="card-actions justify-between items-center">
                   <div className="text-lg font-semibold">{book.category}</div>
-                  <div className="font-semibold flex items-center gap-1 text-lg">
+                  <div className=" flex items-center gap-1 text-lg font-bold">
                     {book.rating}
-                    <span>
+                    <span className="font-bold text-blue-600">
                       <IoStarHalfOutline />
                     </span>
                   </div>
