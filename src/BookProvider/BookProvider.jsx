@@ -1,4 +1,5 @@
 import React, { createContext, useState} from 'react';
+import { toast } from 'react-toastify';
 export const BookContext = createContext();
 export const BookProvider = ({ children }) => {
     const [storeBook, setStoreBook] = useState([]);
@@ -17,10 +18,30 @@ export const BookProvider = ({ children }) => {
         (book) => book.bookId === currentBook.bookId,
       );
       if (isExistBook) {
-        alert('The book is already exists');
+        toast.warn('The Book Already Exists', {
+          position: 'top-right',
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          progress: undefined,
+          theme: 'light',
+          
+        });
       } else {
         setStoreBook([...storeBook, currentBook]);
-        alert(`${currentBook.bookName}  is added the List`)
+        toast.success(`${currentBook.bookName}  is added the List`, {
+          position: 'top-right',
+          autoClose: 1500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: false,
+          progress: undefined,
+          theme: 'light',
+        });
+       
       }
     };
 
