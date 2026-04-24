@@ -101,15 +101,7 @@ const BookDetails = (
             <span className="font-semibold">: {rating}</span>
           </div>
         </div>
-        <div className=" flex gap-2 md:gap-4 my-5 font-secondary">
-          <button
-            onClick={() => {
-              navigate(-1);
-            }}
-            className="btn btn-outline"
-          >
-            Back
-          </button>
+        <div className=" flex gap-2 flex-col sm:flex-row max-w-sm md:gap-4 my-5 font-secondary">
           <button
             className="btn btn-primary"
             onClick={() => handlemarkAsRead(expectedBook)}
@@ -121,6 +113,14 @@ const BookDetails = (
             className="btn btn-accent"
           >
             Add to Wishlist
+          </button>
+          <button
+            onClick={() => {
+              navigate(-1);
+            }}
+            className="btn btn-outline"
+          >
+            Back
           </button>
         </div>
       </div>
