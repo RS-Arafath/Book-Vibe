@@ -11,7 +11,7 @@ const BookDetails = (
   const { bookId } = useParams();
   const navigate = useNavigate();
   const books = use(bookPromise);
-   const { handlemarkAsRead} = useContext(BookContext);
+   const { handlemarkAsRead,handleWishList} = useContext(BookContext);
   const expectedBook = books.find((book) => book.bookId == bookId);
   // console.log(expectedBook.image,'expected book');
   const {
@@ -116,7 +116,7 @@ const BookDetails = (
           >
             Read
           </button>
-          <button className="btn btn-accent">Wishlist</button>
+          <button onClick={()=>handleWishList(expectedBook)} className="btn btn-accent">Wishlist</button>
         </div>
       </div>
     </div>
