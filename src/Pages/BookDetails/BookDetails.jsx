@@ -1,4 +1,4 @@
-import { use } from 'react';
+import { use, useState } from 'react';
 import { useNavigate, useParams } from 'react-router';
 
 const bookPromise = fetch('/booksData.json').then((res) => res.json());
@@ -23,7 +23,9 @@ const BookDetails = () => {
     yearOfPublishing,
   } = expectedBook;
 
-  const handlemarkAsRead = () => {
+  const [storeBook, setStoreBook] = useState([]);
+
+  const handlemarkAsRead = (currentBook) => {
     /**
      * 1) store book id
      * 2) where to store
@@ -31,6 +33,17 @@ const BookDetails = () => {
      * 4) if the book is akready exist show the alert
      * 5) if not then add the book in the array or collection
      */
+   
+    console.log('store book', storeBook);
+    console.log('store book length',storeBook.length);
+    const isExistBook = storeBook.find((book) => book.bookId === currentBook.bookId);
+    if (isExistBook) {
+      alert('The book is already exists');
+     
+    } else {
+      setStoreBook([...storeBook, currentBook]);
+     
+    }
   };
   return (
     <div className="card w-11/12  border border-gray-200 bg-gray-50 shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
@@ -110,7 +123,12 @@ const BookDetails = () => {
           >
             Back
           </button>
-          <button className="btn btn-primary">Read</button>
+          <button
+            className="btn btn-primary"
+            onClick={() => handlemarkAsRead(expectedBook)}
+          >
+            Read
+          </button>
           <button className="btn btn-accent">Wishlist</button>
         </div>
       </div>
