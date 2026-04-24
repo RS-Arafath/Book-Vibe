@@ -9,7 +9,7 @@ const Books = () => {
   
 
   
-    console.log('wishList', storeBook);
+   
   return (
     <div className=" w-11/12 mx-auto   mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-25">
       <div className="bg-gray-200 w-full p-3 sm:p-4 md:p-6  mb-10 text-2xl md:text-3xl lg:text-4xl text-center rounded-2xl font-bold font-secondary">
