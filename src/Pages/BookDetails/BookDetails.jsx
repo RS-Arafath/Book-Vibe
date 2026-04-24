@@ -26,17 +26,17 @@ const {
 } = expectedBook;
   
   return (
-    <div className="card w-11/12 container mx-auto  lg:card-side bg-base-100 shadow-xl mt-20 md:mt-30">
-      <figure className="p-5 rounded-xl w-full max-h-[500px] flex-1 ">
+    <div className="card w-11/12 border border-gray-200 shadow-xl  container mx-auto  lg:card-side bg-base-100 overflow-hidden mt-20 md:mt-30">
+      <figure className="p-5  overflow-hidden  w-full max-h-[500px] flex-1 bg-gray-100 py-3">
         <img
           src={image}
           alt={bookName}
-          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-contain transition duration-300 cursor-pointer overflow-hidden  hover:scale-90 "
+          className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-contain duration-300 cursor-pointer overflow-hidden  hover:scale-95 scale-90"
         />
       </figure>
 
       <div className="card-body flex-2">
-        <h2 className="font-primary text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="font-secondary text-3xl sm:text-4xl md:text-5xl font-bold">
           {bookName}
         </h2>
         <h4 className="font-secondary ">

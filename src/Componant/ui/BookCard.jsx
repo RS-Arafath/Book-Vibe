@@ -44,12 +44,12 @@ const BookCard = ({book}) => {
             </strong>
           ))}
         </div>
-        <h2 className="card-title font-bold text-2xl sm:text-3xl md:text-4xl">
+        <h2 className="card-title font-secondary font-bold text-lg sm:text-xl md:text-2xl">
           {book.bookName}
         </h2>
-        <p className="font-semibold text-base lg:text-lg">{book.author}</p>
+        <p className="font-semibold text-xs lg:text-base italic">{book.author}</p>
 
-        <div className="divider m-2"></div>
+        <div className="divider m-0"></div>
         <div className="card-actions justify-between items-center">
           <div className="text-lg font-semibold">{book.category}</div>
           <div className=" flex items-center gap-1 text-lg font-bold">
