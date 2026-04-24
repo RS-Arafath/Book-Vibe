@@ -33,8 +33,8 @@ const BookDetails = (
   
 
   return (
-    <div className="card w-11/12  border border-gray-200 bg-gray-50 dark:bg-gray-500 shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
-      <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-125 flex-2 bg-gray-200 dark:bg-gray-600  py-3">
+    <div className="card w-11/12  border border-gray-200 bg-gray-50  shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
+      <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-125 flex-2 bg-gray-200 py-3">
         <img
           src={image}
           alt={bookName}
@@ -43,33 +43,34 @@ const BookDetails = (
       </figure>
 
       <div className="card-body flex-3">
-        <h2 className="font-secondary text-3xl sm:text-4xl md:text-5xl font-bold">
+        <h2 className="font-secondary text-3xl sm:text-4xl md:text-5xl font-bold text-black">
           {bookName}
         </h2>
         <h4 className="font-secondary ">
-          <span className="text-lg md:text-xl  font-bold  ">By: </span>
-          <span className="text-lg dark:text-white text-[#737373] md:text-xl  font-semiboldbold ">
+          <span className="text-lg md:text-xl  font-bold text-black ">
+            By:{' '}
+          </span>
+          <span className="text-lg text-[#737373] md:text-xl  font-semiboldbold ">
             {author}
           </span>
         </h4>
         <div className="divider my-0"></div>
 
-        <p className="font-secondary text-[#737373] dark:text-green-400 text-lg">
-          <span className="font-semibold font-secondary">Category:</span>{' '}
-          {category}
-        </p>
+        <p className="font-secondary text-[#737373] text-lg">{category}</p>
         <div className="divider my-0"></div>
 
         <p className="">
-          <span className="font-primary text-base sm:text-lg font-bold">
+          <span className="font-primary text-base text-black sm:text-lg font-bold">
             Review:{' '}
           </span>
           {'   '}
-          <span className="text-base sm:text-lg font-secondary ">{review}</span>
+          <span className="text-base sm:text-lg font-secondary text-gray-500">
+            {review}
+          </span>
         </p>
 
         <div className="flex gap-2 items-center">
-          <span className="font-primary font-bold text-lg">Tag</span>
+          <span className="font-primary font-bold text-lg text-black">Tag</span>
           {tags.map((tag, ind) => (
             <strong
               key={ind}
@@ -84,30 +85,26 @@ const BookDetails = (
 
         <div className="flex flex-col gap-3 font-secondary">
           <div className="flex">
-            <span className="w-40 sm:w-48 text-[#737373] dark:text-white ">
+            <span className="w-40 sm:w-48 text-[#737373] ">
               Number of pages
             </span>
-            <span className="font-semibold dark:text-white ">
-              : {totalPages}
-            </span>
+            <span className="font-semibold text-[#737373]">: {totalPages}</span>
           </div>
           <div className="flex">
-            <span className=" w-40 sm:w-48 text-[#737373] dark:text-white ">
-              Publisher
-            </span>
-            <span className="font-semibold">: {publisher}</span>
+            <span className=" w-40 sm:w-48 text-[#737373]">Publisher</span>
+            <span className="font-semibold text-[#737373]">: {publisher}</span>
           </div>
           <div className="flex">
-            <span className=" w-40 sm:w-48 text-[#737373] dark:text-white ">
+            <span className=" w-40 sm:w-48 text-[#737373]">
               Year of Publishing
             </span>
-            <span className="font-semibold">: {yearOfPublishing}</span>
+            <span className="font-semibold text-[#737373]">
+              : {yearOfPublishing}
+            </span>
           </div>
           <div className="flex">
-            <span className="w-40 dark:text-white  sm:w-48 text-[#737373]">
-              Rating
-            </span>
-            <span className="font-semibold">: {rating}</span>
+            <span className="w-40 sm:w-48 text-[#737373]">Rating</span>
+            <span className="font-semibold text-[#737373]">: {rating}</span>
           </div>
         </div>
         <div className=" flex gap-2 flex-col sm:flex-row max-w-sm md:gap-4 my-5 font-secondary">

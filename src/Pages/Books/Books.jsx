@@ -12,11 +12,11 @@ const Books = () => {
    
   return (
     <div className=" w-11/12 mx-auto   mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-25">
-      <div className="bg-gray-200 w-full p-3 sm:p-4 md:p-6  mb-10 text-2xl md:text-3xl lg:text-4xl text-center rounded-2xl font-bold font-secondary dark:bg-amber-200 dark:text-black">
+      <div className="bg-gray-200 w-full p-3 sm:p-4 md:p-6  mb-10 text-2xl md:text-3xl lg:text-4xl text-center rounded-2xl font-bold font-secondary text-black">
         <h2>Books</h2>
       </div>
-    
-      <div className='text-sm md:text-lg font-secondary font-semibold'>
+
+      <div className="text-sm md:text-lg font-secondary font-semibold">
         <Tabs>
           <TabList>
             <Tab>Read List</Tab>
@@ -24,10 +24,14 @@ const Books = () => {
           </TabList>
 
           <TabPanel>
-            <h2><ReadList></ReadList></h2>
+            <h2>
+              <ReadList></ReadList>
+            </h2>
           </TabPanel>
           <TabPanel>
-            <h2><WishList></WishList></h2>
+            <h2>
+              <WishList></WishList>
+            </h2>
           </TabPanel>
         </Tabs>
       </div>
