@@ -79,13 +79,13 @@ const Navbar = () => {
         <div className="navbar-end flex gap-3">
           <NavLink to={'/signIn'}>
             {' '}
-            <button className="btn bg-green-600 p-2 font-semibold md:p-4 hover:bg-green-500">
+            <button className="btn shadow-none bg-green-600 p-2 font-semibold md:p-4 hover:bg-green-500">
               Sign In
             </button>
           </NavLink>
           <NavLink to={'/signUp'}>
             {' '}
-            <button className="btn font-secondary btn-outline p-2 md:p-4 btn-info">
+            <button className="btn shadow-none font-secondary btn-outline p-2 md:p-4 btn-info">
               Sign Up
             </button>
           </NavLink>
