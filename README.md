@@ -99,9 +99,9 @@ detailed info, and track your personal reading journey.
 ## 📁 Project Structure
 
 ```
-Book-Vibe/
+world-famous-book/
 ├── public/
-│   └── favicon.ico
+│   └── json data
 ├── src/
 │   ├── assets/               # Static images
 │   ├── components/
