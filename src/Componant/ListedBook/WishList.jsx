@@ -189,7 +189,7 @@ const WishList = () => {
               strokeLinecap="round"
             />
           </svg>
-          Add to reading list
+          Add to Wish list
         </button>
 
         <style>{`
