@@ -126,7 +126,7 @@ Book-Vibe/
 git clone https://github.com/RS-Arafath/Book-Vibe.git
 
 # 2. Move into the project folder
-cd Book-Vibe
+cd world-famous-book
 
 # 3. Install all dependencies
 npm install
