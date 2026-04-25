@@ -15,10 +15,13 @@ A modern, responsive book discovery web app — explore world-famous books, view
 ---
 
 ## 🖼️ Preview
-
+### home
 ![Book Vibe - Home Page](./src/assets/mockup/home.png)
+### Book Details
 ![Book Vibe - Book Details](./src/assets/mockup/details.png)
+### Reading and Wish List
 ![Book Vibe - Book Activity](./src/assets/mockup/readlist.png)
+### User Login
 ![Book Vibe - User LogIn](./src/assets/mockup/signin.png)
 
 ---
