@@ -175,6 +175,7 @@ Contributions are welcome!
 
 ---
 
+<div align="center">
 ## 👨‍💻 Author
 
 **RS Arafath**
@@ -188,6 +189,7 @@ Contributions are welcome!
 This project is open source and available under the [MIT License](LICENSE).
 
 ---
+</div>
 
 <div align="center">
   Made with ❤️ by <a href="https://github.com/RS-Arafath">RS Arafath</a>
