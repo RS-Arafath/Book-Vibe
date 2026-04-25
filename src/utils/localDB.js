@@ -7,14 +7,16 @@ const getAllReadListFromLocalDB = () => {
   return [];
 };
 const addReadListToLocalDB = (book) => {
-  const allBooks = getAllReadListFromLocalDB();
+  if (!book) return false;
+
+  const allBooks = (getAllReadListFromLocalDB() || []).filter(Boolean); // ←remove  null 
+
   const isAlreadyExist = allBooks.find((bk) => bk.bookId === book.bookId);
+
   if (!isAlreadyExist) {
     allBooks.push(book);
     localStorage.setItem('storeBook', JSON.stringify(allBooks));
-    return true; // added
   }
-  return false; // already exists
 };
 
 

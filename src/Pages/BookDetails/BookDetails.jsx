@@ -1,17 +1,14 @@
-import { use, useContext,} from 'react';
+import { use, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router';
 import { BookContext } from '../../BookProvider/BookProvider';
 
-
 const bookPromise = fetch('/booksData.json').then((res) => res.json());
 
-const BookDetails = (
-  
-) => {
+const BookDetails = () => {
   const { bookId } = useParams();
   const navigate = useNavigate();
   const books = use(bookPromise);
-   const { handlemarkAsRead,handleWishList} = useContext(BookContext);
+  const { handlemarkAsRead, handleWishList } = useContext(BookContext);
   const expectedBook = books.find((book) => book.bookId == bookId);
   // console.log(expectedBook.image,'expected book');
   const {
@@ -26,12 +23,7 @@ const BookDetails = (
     publisher,
     yearOfPublishing,
   } = expectedBook;
-  
-
-
-
-  
-
+ 
   return (
     <div className="card w-11/12  border border-gray-200 bg-gray-50  shadow container mx-auto  lg:card-side  overflow-hidden mt-20 md:mt-30">
       <figure className="p-5 md:mt-3 md:ml-3 md:rounded-lg  overflow-hidden  w-full max-h-125 flex-2 bg-gray-200 py-3">
@@ -108,6 +100,7 @@ const BookDetails = (
           </div>
         </div>
         <div className=" flex gap-2 flex-col sm:flex-row max-w-sm md:gap-4 my-5 font-secondary">
+         
           <button
             className="btn btn-primary"
             onClick={() => handlemarkAsRead(expectedBook)}
