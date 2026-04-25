@@ -9,7 +9,7 @@ import WishList from '../../Componant/ListedBook/WishList';
 const Books = () => {
   const [sortingType,setSortingType]=useState('')
   
-  console.log(sortingType);
+  //console.log(sortingType);
    
   return (
     <div className=" w-11/12 mx-auto   mt-20 mb-10 md:mb-15 lg:mb-20 lg:my-25">
@@ -21,8 +21,13 @@ const Books = () => {
           className="dropdown dropdown-center  
      "
         >
-          <div tabIndex={0} role="button" className="btn m-1 sm:text-lg">
-            Sort by ⬇️
+          <div
+            tabIndex={0}
+            role="button"
+            className="btn m-1 sm:text-lg font-secondary"
+          >
+            Sort by{' '}
+            <span className="font-primary italic">{sortingType}⬇️ </span>
           </div>
           <ul
             tabIndex="-1"

@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { BookContext } from '../../BookProvider/BookProvider';
 import BookCard from '../ui/BookCard';
 import ReadBookCard from '../ListedBookCard/ReadBookCard';
@@ -7,12 +7,22 @@ import { useNavigate } from 'react-router';
 const ReadList = ({ sortingType }) => {
   const navigate = useNavigate();
   const { storeBook } = useContext(BookContext);
-
+  const [filterReadList, setFilterReadList] = useState(storeBook);
+  
   //sorting list
+useEffect(() => {
+  if (sortingType === 'pages') {
+    const sortData = [...storeBook].sort((a, b) => a.totalPages - b.totalPages);
+    setFilterReadList(sortData);
+  } else if (sortingType === 'rating') {
+    const sortData = [...storeBook].sort((a, b) => a.rating - b.rating);
+    setFilterReadList(sortData);
+  }
+}, [sortingType, storeBook]);
 
   
-  
-  if (storeBook.length === 0) {
+
+  if (filterReadList.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-7 sm:py-8 md:py-9 lg:py-10 px-6 text-center">
         <div
@@ -210,7 +220,7 @@ const ReadList = ({ sortingType }) => {
   }
   return (
     <div className="w-11/12 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mx-auto   gap-10 mt-7 sm:mt-9 md:mt-10">
-      {storeBook.map((book, ind) => (
+      {filterReadList.map((book, ind) => (
         <ReadBookCard key={ind} book={book}></ReadBookCard>
       ))}
     </div>
