@@ -20,20 +20,20 @@ const Footer = () => {
       <nav>
         <div className="grid grid-flow-col gap-4 text-3xl sm:text-4xl cursor-pointer place-items-center">
           <a className="hover:text-amber-600 duration-300 ease-out  p-1  hover:scale-130 inline-block transition-transform">
-            <FaXTwitter className="hover:text-amber-500 duration-300 ease-out  p-1  hover:scale-130 inline-block transition-transform" />
+            <FaXTwitter className="hover:text-amber-500 duration-300 ease-out  p-1  hover:scale-110 inline-block transition-transform" />
           </a>
 
           <a>
             <FaFacebook
               href=""
-              className="hover:text-blue-500 duration-300 ease-out  p-1  hover:scale-130 inline-block transition-transform"
+              className="hover:text-blue-500 duration-300 ease-out  p-1  hover:scale-120 inline-block transition-transform"
             />
           </a>
           <a href="https://www.linkedin.com/in/rs-arafath/">
-            <FaLinkedin className="hover:text-blue-500 duration-300 ease-out  p-1  hover:scale-130 inline-block transition-transform" />
+            <FaLinkedin className="hover:text-blue-500 duration-300 ease-out  p-1  hover:scale-120 inline-block transition-transform" />
           </a>
           <a href="https://github.com/RS-Arafath">
-            <FaGithub className="hover:text-amber-500 duration-300 ease-out  p-1  hover:scale-130 inline-block transition-transform" />
+            <FaGithub className="hover:text-amber-500 duration-300 ease-out  p-1  hover:scale-120 inline-block transition-transform" />
           </a>
         </div>
       </nav>
