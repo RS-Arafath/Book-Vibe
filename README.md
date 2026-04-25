@@ -191,7 +191,8 @@ Contributions are welcome!
 ---
 
 <div align="center">
-## 👨‍💻 Author
+
+# 👨‍💻 Author
 **RS Arafath**
 
 [![GitHub](https://img.shields.io/badge/GitHub-RS--Arafath-181717?style=flat-square&logo=github)](https://github.com/RS-Arafath)
