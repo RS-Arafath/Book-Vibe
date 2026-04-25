@@ -2,10 +2,23 @@ import React, { useContext } from 'react';
 import { BookContext } from '../../BookProvider/BookProvider';
 import WishListCard from '../ListedBookCard/WishListCard';
 import { useNavigate } from 'react-router';
-const WishList = () => {
+const WishList = ({ sortingType }) => {
   const navigate = useNavigate();
   const { wishlist } = useContext(BookContext);
-  if (wishlist.length === 0) {
+
+ 
+
+  //sorting list
+  let filterWishList = wishlist;
+   if (sortingType === 'pages') {
+     filterWishList = [...wishlist].sort((a, b) => a.totalPages - b.totalPages);
+   
+   } else if (sortingType === 'rating') {
+    filterWishList = [...wishlist].sort((a, b) => a.rating - b.rating);
+    
+   }
+
+  if (filterWishList.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center py-7 sm:py-8 md:py-9 lg:py-10 px-6 text-center">
         <div
@@ -204,7 +217,7 @@ const WishList = () => {
   return (
     <div>
       <div className="w-11/12 grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3  mx-auto   gap-10 mt-7 sm:mt-9 md:mt-10">
-        {wishlist.map((book, ind) => (
+        {filterWishList.map((book, ind) => (
           <WishListCard key={ind} book={book}></WishListCard>
         ))}
       </div>
